@@ -1,0 +1,21 @@
+<% include partials/header %>
+
+<div class="container">
+    <div class="card mx-auto" style="width: 35rem;">
+        <img class="card-img-top" src="/images/error2.png" alt="OOPS">
+        <div class="card-body text-center">
+          <h5 class="card-title">Page not found</h5>
+          <p class="card-text">The page you are looking for doesn't exist or an error occured.</p>
+          <p><button class="btn btn-primary" onclick="goBack()">Go back</button> or <a href="/" class="btn btn-primary">Visit homepage</a></p>
+        </div>
+    </div>
+</div>
+<br>
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
+
+<% include partials/footer %> 

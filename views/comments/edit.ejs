@@ -1,0 +1,24 @@
+<% include ../partials/header %>
+
+<div class="container">
+    <h1 class="display-4 text-center">Edit this review %></h1>
+    <hr class="my-4">
+    <div class="row">
+        <form action="/campgrounds/<%= campground_id %>/comments/<%= comment._id %>?_method=PUT" method="POST" class="mx-auto">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon3">Text</span>
+                </div>
+                <input type="text" class="form-control form-control-lg" name="comment[text]" required="true" value="<%= comment.text %>">
+            </div>
+
+            <button class="btn btn-success btn-block btn-lg" type="submit">Submit</button>
+        </form>
+    </div>
+    <br>
+    <div class="container text-center">
+        <a class="nav-link" href="/campgrounds/<%= campground_id %>"><button class="btn btn-primary btn-md">Go back</button></a>
+    </div>
+</div>
+
+<% include ../partials/footer %>
